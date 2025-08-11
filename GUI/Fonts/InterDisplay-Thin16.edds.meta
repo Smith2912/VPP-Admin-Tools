@@ -1,10 +1,13 @@
 MetaFileClass {
  Name "{576B346FE8A3DB23}VPPAdminTools/GUI/Fonts/InterDisplay-Thin16.edds"
  Author "desktop-scqak3t"
- ChangeDate -1265290498
+ ChangeDate -828886260
  Configurations {
   TGAResourceClass PC {
    SourceFile "InterDisplay-Thin16.tga"
+   FormatCompress Copy
+   CompressTreshold 0
+   ConversionQuality 1
   }
   TGAResourceClass XBOX_ONE : PC {
   }

@@ -106,6 +106,7 @@ WindowWidgetClass rootFrame {
          hexactsize 0
          vexactsize 0
          style Editor
+         "no focus" 1
          text "↻"
          font "vppadmintools/gui/fonts/InterDisplay-Bold"
         }

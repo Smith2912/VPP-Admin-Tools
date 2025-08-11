@@ -44,7 +44,7 @@ FrameWidgetClass rootFrame {
     }
     TextWidgetClass ButtonName {
      ignorepointer 1
-     size 0.74 0.6
+     size 0.74 0.4
      halign right_ref
      valign center_ref
      hexactpos 0
@@ -53,7 +53,7 @@ FrameWidgetClass rootFrame {
      vexactsize 0
      style Normal
      text "button name"
-     font "vppadmintools/gui/fonts/InterDisplay-Regular"
+     font "vppadmintools/gui/fonts/InterDisplay-Medium"
      "outline size" 2
      "outline color" 0 0 0 1
      "bold text" 1

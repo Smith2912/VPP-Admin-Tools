@@ -8,7 +8,7 @@ PanelWidgetClass rootFrame {
  hexactsize 0
  vexactsize 0
  scriptclass "PopUpCreatePreset"
- style DayZDefaultPanel
+ style editor_quad_dark
  {
   PanelWidgetClass PnlBg {
    ignorepointer 1
@@ -20,7 +20,7 @@ PanelWidgetClass rootFrame {
    vexactpos 0
    hexactsize 0
    vexactsize 0
-   style editor_selection
+   style editor_quad_dark
   }
   TextWidgetClass text_title {
    ignorepointer 1
@@ -31,8 +31,8 @@ PanelWidgetClass rootFrame {
    hexactsize 0
    vexactsize 0
    text "#VSTR_LBL_NEW_PRESET_ATTS_ITEMMANAGER"
-   font "gui/fonts/sdf_MetronLight24"
-   "exact text" 1
+   font "vppadmintools/gui/fonts/InterDisplay-SemiBold"
+   "exact text" 0
    "exact text size" 12
    "size to text h" 0
    "text valign" center
@@ -40,7 +40,7 @@ PanelWidgetClass rootFrame {
   GridSpacerWidgetClass panel_content {
    ignorepointer 0
    position 0.01 0.25
-   size 0.9 0.75
+   size 0.9 0.4
    hexactpos 0
    vexactpos 0
    hexactsize 0
@@ -51,17 +51,18 @@ PanelWidgetClass rootFrame {
    Columns 2
    {
     TextWidgetClass text_name {
+     clipchildren 0
      ignorepointer 0
      position 0 0
-     size 0.27 0.212
+     size 0.27 0.062
      valign center_ref
      hexactpos 0
      vexactpos 0
      hexactsize 0
      vexactsize 0
      text "#VSTR_LBL_NAME"
-     font "gui/fonts/sdf_MetronLight24"
-     "exact text" 1
+     font "vppadmintools/gui/fonts/InterDisplay-Medium"
+     "exact text" 0
      "exact text size" 11
      "size to text h" 0
      "size to text v" 0
@@ -70,7 +71,7 @@ PanelWidgetClass rootFrame {
     PanelWidgetClass PanelWidget0 {
      ignorepointer 1
      position 0 0
-     size 0.82 0.65
+     size 0.82 0.7
      hexactpos 0
      vexactpos 0
      hexactsize 0
@@ -86,7 +87,7 @@ PanelWidgetClass rootFrame {
        vexactsize 0
        text "#VSTR_LBL_PRESET_NAME"
        "exact text" 1
-       font "gui/fonts/MetronLight16"
+       font "vppadmintools/gui/fonts/InterDisplay-Regular"
       }
      }
     }
@@ -112,7 +113,7 @@ PanelWidgetClass rootFrame {
      vexactsize 0
      style Editor
      text "#VSTR_CANCEL"
-     font "gui/fonts/MetronLight16"
+     font "vppadmintools/gui/fonts/InterDisplay-Medium"
     }
     ButtonWidgetClass button_save {
      position 0 0.1
@@ -125,7 +126,7 @@ PanelWidgetClass rootFrame {
      scaled 1
      style Editor
      text "#VSTR_LBL_SAVE"
-     font "gui/fonts/MetronLight16"
+     font "vppadmintools/gui/fonts/InterDisplay-Medium"
     }
    }
   }

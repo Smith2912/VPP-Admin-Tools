@@ -38,37 +38,42 @@ PanelWidgetClass PanelData {
    style DayZDefaultPanelBottom
    Padding 4
    Margin 6
+   "Size To Content H" 1
    "Size To Content V" 1
    Columns 2
    Rows 1
    {
     CheckBoxWidgetClass CheckBox {
+     clipchildren 0
      ignorepointer 0
-     size 1 0.9
+     position 0 0
+     size 0.25 0.9
      valign center_ref
-     hexactpos 1
-     vexactpos 1
+     hexactpos 0
+     vexactpos 0
      hexactsize 0
      vexactsize 0
      text "Chernogorsk"
      font "vppadmintools/gui/fonts/InterDisplay-SemiBold"
     }
     TextWidgetClass CoordsInput {
+     clipchildren 1
      ignorepointer 1
-     size 0.15 1
+     position 0 0
+     size 0.75 1
      halign right_ref
      valign center_ref
-     hexactpos 1
-     vexactpos 1
+     hexactpos 0
+     vexactpos 0
      hexactsize 0
      vexactsize 0
      text "7500,300,7500"
-     font "vppadmintools/gui/fonts/InterDisplay-SemiBold"
+     font "vppadmintools/gui/fonts/InterDisplay-Regular"
      "exact text" 0
      "exact text size" 12
-     "size to text h" 1
+     "size to text h" 0
      "size to text v" 0
-     "text halign" center
+     "text halign" right
      "text valign" center
     }
    }

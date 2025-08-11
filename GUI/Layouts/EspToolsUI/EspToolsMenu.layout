@@ -63,7 +63,7 @@ FrameWidgetClass rootFrame {
         TextWidgetClass title_text {
          ignorepointer 1
          position 0 0
-         size 0.99 1.3
+         size 0.99 1
          valign center_ref
          hexactpos 0
          vexactpos 0
@@ -212,7 +212,7 @@ FrameWidgetClass rootFrame {
         TextWidgetClass title_text_Items {
          ignorepointer 1
          position 0 0
-         size 0.99 1.3
+         size 0.99 1
          valign center_ref
          hexactpos 0
          vexactpos 0
@@ -327,7 +327,7 @@ FrameWidgetClass rootFrame {
       TextWidgetClass title_text_ {
        ignorepointer 1
        position 0 0
-       size 0.99 1.3
+       size 0.99 1
        valign center_ref
        hexactpos 0
        vexactpos 0

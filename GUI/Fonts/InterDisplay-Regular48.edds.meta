@@ -1,10 +1,13 @@
 MetaFileClass {
  Name "{1547C6C22329AE55}VPPAdminTools/GUI/Fonts/InterDisplay-Regular48.edds"
  Author "desktop-scqak3t"
- ChangeDate -1366478082
+ ChangeDate -393202932
  Configurations {
   TGAResourceClass PC {
    SourceFile "InterDisplay-Regular48.tga"
+   FormatCompress Copy
+   CompressTreshold 0
+   ConversionQuality 1
   }
   TGAResourceClass XBOX_ONE : PC {
   }

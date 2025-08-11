@@ -51,7 +51,7 @@ WindowWidgetClass rootFrame {
         TextWidgetClass title_txt_itm_list {
          ignorepointer 1
          position 0 0
-         size 0.99 1.3
+         size 0.99 1
          valign center_ref
          hexactpos 0
          vexactpos 0
@@ -140,7 +140,7 @@ WindowWidgetClass rootFrame {
         TextWidgetClass title_txt_itm_prev {
          ignorepointer 1
          position 0 0
-         size 0.99 1.3
+         size 0.99 1
          valign center_ref
          hexactpos 0
          vexactpos 0
@@ -208,7 +208,7 @@ WindowWidgetClass rootFrame {
         TextWidgetClass title_presets_text {
          ignorepointer 1
          position 0 0
-         size 0.99 1.3
+         size 0.99 1
          valign center_ref
          hexactpos 0
          vexactpos 0
@@ -293,7 +293,7 @@ WindowWidgetClass rootFrame {
           TextWidgetClass title_saved_presets_text {
            ignorepointer 1
            position -0.05 0
-           size 0.99 1.3
+           size 0.99 1
            valign center_ref
            hexactpos 0
            vexactpos 0
@@ -394,7 +394,7 @@ WindowWidgetClass rootFrame {
            {
             TextWidgetClass txtbtn {
              ignorepointer 1
-             size 1 1.3
+             size 1 1
              halign center_ref
              valign center_ref
              hexactpos 0
@@ -422,7 +422,7 @@ WindowWidgetClass rootFrame {
            {
             TextWidgetClass txtbtn0 {
              ignorepointer 1
-             size 1 1.3
+             size 1 1
              halign center_ref
              valign center_ref
              hexactpos 0
@@ -479,7 +479,7 @@ WindowWidgetClass rootFrame {
            {
             TextWidgetClass txtbtn2 {
              ignorepointer 1
-             size 1 1.3
+             size 1 1
              halign center_ref
              valign center_ref
              hexactpos 0
@@ -512,7 +512,7 @@ WindowWidgetClass rootFrame {
           TextWidgetClass title_txt_prst_action {
            ignorepointer 1
            position 0 0
-           size 0.99 1.3
+           size 0.99 1
            valign center_ref
            hexactpos 0
            vexactpos 0
@@ -598,7 +598,7 @@ WindowWidgetClass rootFrame {
           TextWidgetClass title_saved_presets_txt_items {
            ignorepointer 1
            position 0 0
-           size 0.99 1.3
+           size 0.99 1
            valign center_ref
            hexactpos 0
            vexactpos 0
@@ -655,7 +655,7 @@ WindowWidgetClass rootFrame {
           TextWidgetClass title_txt_itm_options {
            ignorepointer 1
            position 0 0
-           size 0.99 1.3
+           size 0.99 1
            valign center_ref
            hexactpos 0
            vexactpos 0

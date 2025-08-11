@@ -1,10 +1,13 @@
 MetaFileClass {
  Name "{2C8276970358FCE8}VPPAdminTools/GUI/Fonts/InterDisplay-SemiBold58.edds"
  Author "desktop-scqak3t"
- ChangeDate -1835715842
+ ChangeDate -1432866036
  Configurations {
   TGAResourceClass PC {
    SourceFile "InterDisplay-SemiBold58.tga"
+   FormatCompress Copy
+   CompressTreshold 0
+   ConversionQuality 1
   }
   TGAResourceClass XBOX_ONE : PC {
   }

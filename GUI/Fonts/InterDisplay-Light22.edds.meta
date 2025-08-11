@@ -1,10 +1,13 @@
 MetaFileClass {
  Name "{C7625AD17E6E835C}VPPAdminTools/GUI/Fonts/InterDisplay-Light22.edds"
  Author "desktop-scqak3t"
- ChangeDate -1210780930
+ ChangeDate -997706996
  Configurations {
   TGAResourceClass PC {
    SourceFile "InterDisplay-Light22.tga"
+   FormatCompress Copy
+   CompressTreshold 0
+   ConversionQuality 1
   }
   TGAResourceClass XBOX_ONE : PC {
   }

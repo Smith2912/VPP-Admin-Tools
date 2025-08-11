@@ -53,7 +53,7 @@ PanelWidgetClass PanelPlayerDetails {
      {
       TextWidgetClass PlayerNameLabel {
        ignorepointer 1
-       size 1 1
+       size 1 0.85
        valign center_ref
        hexactpos 1
        vexactpos 1
@@ -70,7 +70,7 @@ PanelWidgetClass PanelPlayerDetails {
       }
       TextWidgetClass Name {
        ignorepointer 1
-       size 1 1
+       size 1 0.85
        halign right_ref
        valign center_ref
        hexactpos 1
@@ -99,7 +99,7 @@ PanelWidgetClass PanelPlayerDetails {
      {
       TextWidgetClass GUIDLabel {
        ignorepointer 1
-       size 1 1
+       size 1 0.85
        valign center_ref
        hexactpos 1
        vexactpos 1
@@ -116,7 +116,7 @@ PanelWidgetClass PanelPlayerDetails {
       }
       TextWidgetClass SteamID {
        ignorepointer 1
-       size 1 1
+       size 1 0.85
        halign right_ref
        valign center_ref
        hexactpos 1
@@ -145,7 +145,7 @@ PanelWidgetClass PanelPlayerDetails {
      {
       TextWidgetClass IDLabel {
        ignorepointer 1
-       size 1 1
+       size 1 0.85
        valign center_ref
        hexactpos 1
        vexactpos 1
@@ -163,7 +163,7 @@ PanelWidgetClass PanelPlayerDetails {
       TextWidgetClass Guid {
        ignorepointer 1
        position 40 0
-       size 0.05 1
+       size 0.05 0.85
        valign center_ref
        hexactpos 1
        vexactpos 1
@@ -192,7 +192,7 @@ PanelWidgetClass PanelPlayerDetails {
      {
       TextWidgetClass UGLabel {
        ignorepointer 1
-       size 1 1
+       size 1 0.85
        valign center_ref
        hexactpos 1
        vexactpos 1
@@ -209,7 +209,7 @@ PanelWidgetClass PanelPlayerDetails {
       }
       TextWidgetClass UserGroup {
        ignorepointer 1
-       size 1 1
+       size 1 0.85
        halign right_ref
        valign center_ref
        hexactpos 1
@@ -253,7 +253,7 @@ PanelWidgetClass PanelPlayerDetails {
       }
       TextWidgetClass Health {
        ignorepointer 1
-       size 1 1
+       size 1 0.85
        halign right_ref
        valign center_ref
        hexactpos 1
@@ -297,7 +297,7 @@ PanelWidgetClass PanelPlayerDetails {
       }
       TextWidgetClass Blood {
        ignorepointer 1
-       size 1 1
+       size 1 0.85
        halign right_ref
        valign center_ref
        hexactpos 1
@@ -341,7 +341,7 @@ PanelWidgetClass PanelPlayerDetails {
       }
       TextWidgetClass Shock {
        ignorepointer 1
-       size 1 1
+       size 1 0.85
        halign right_ref
        valign center_ref
        hexactpos 1
@@ -385,7 +385,7 @@ PanelWidgetClass PanelPlayerDetails {
       }
       TextWidgetClass Weapon {
        ignorepointer 1
-       size 1 1
+       size 1 0.85
        halign right_ref
        valign center_ref
        hexactpos 1
