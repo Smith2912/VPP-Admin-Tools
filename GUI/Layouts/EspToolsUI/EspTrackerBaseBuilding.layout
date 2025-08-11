@@ -56,7 +56,7 @@ GridSpacerWidgetClass SpacerGrid {
    vexactsize 1
    style Editor
    text "Copy"
-   font "gui/fonts/sdf_MetronLight24"
+   font "vppadmintools/gui/fonts/InterDisplay-Regular"
   }
   ButtonWidgetClass PassCodeReset {
    color 0.949 0.0392 0.0392 1
@@ -68,7 +68,7 @@ GridSpacerWidgetClass SpacerGrid {
    vexactsize 1
    style Editor
    text "Clear"
-   font "gui/fonts/sdf_MetronLight24"
+   font "vppadmintools/gui/fonts/InterDisplay-Regular"
   }
  }
 }

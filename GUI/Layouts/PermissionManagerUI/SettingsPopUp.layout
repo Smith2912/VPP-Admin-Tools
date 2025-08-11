@@ -9,7 +9,6 @@ FrameWidgetClass rootFrame {
  {
   PanelWidgetClass mainPnl {
    ignorepointer 1
-   color 1 1 1 0.549
    size 1 1
    halign center_ref
    valign bottom_ref
@@ -17,7 +16,7 @@ FrameWidgetClass rootFrame {
    vexactpos 0
    hexactsize 0
    vexactsize 0
-   style DayZDefaultPanel
+   style editor_quad_dark
    {
     PanelWidgetClass PnlBg {
      ignorepointer 1
@@ -29,7 +28,7 @@ FrameWidgetClass rootFrame {
      vexactpos 0
      hexactsize 0
      vexactsize 0
-     style DayZDefaultPanel
+     style editor_quad_dark
     }
     PanelWidgetClass titleBG {
      ignorepointer 1
@@ -52,16 +51,15 @@ FrameWidgetClass rootFrame {
      vexactsize 0
      style Bold
      text "#VSTR_LBL_UPDATE_GROUP_ATTS"
-     font "gui/fonts/MetronLight22"
+     font "vppadmintools/gui/fonts/InterDisplay-Regular22"
      "exact text" 1
      "size to text h" 0
      "text valign" center
     }
     PanelWidgetClass panel_redline {
      ignorepointer 1
-     color 1 0 0 1
      position 0 0.12
-     size 0.99 0.007
+     size 0.995 0.007
      halign center_ref
      hexactpos 0
      vexactpos 0
@@ -90,7 +88,7 @@ FrameWidgetClass rootFrame {
        vexactsize 0
        style Editor
        text "#VSTR_CANCEL"
-       font "gui/fonts/MetronLight"
+       font "vppadmintools/gui/fonts/InterDisplay-Medium"
       }
       ButtonWidgetClass button_save {
        position 0 0.1
@@ -103,13 +101,13 @@ FrameWidgetClass rootFrame {
        scaled 1
        style Editor
        text "#VSTR_LBL_SAVE"
-       font "gui/fonts/MetronLight"
+       font "vppadmintools/gui/fonts/InterDisplay-Medium"
       }
      }
     }
     GridSpacerWidgetClass panel_content {
      ignorepointer 0
-     size 0.9 0.71
+     size 0.9 0.5
      halign center_ref
      valign center_ref
      hexactpos 0
@@ -120,13 +118,13 @@ FrameWidgetClass rootFrame {
      Margin 0
      "Size To Content H" 1
      "Size To Content V" 1
-     content_halign center
-     Columns 2
-     Rows 1
+     content_valign center
+     Columns 1
+     Rows 2
      {
       CheckBoxWidgetClass chkForceAdminName {
        position 0 0
-       size 0.4 1
+       size 0.1 0.15
        halign center_ref
        valign center_ref
        hexactpos 0
@@ -134,22 +132,27 @@ FrameWidgetClass rootFrame {
        hexactsize 0
        vexactsize 0
        style Default
+       text "ENABLED"
       }
       MultilineTextWidgetClass info {
+       clipchildren 0
        ignorepointer 1
-       position 0.012 0.028
-       size 0.632 1
+       size 0.8 1
+       halign center_ref
+       valign center_ref
        hexactpos 0
        vexactpos 0
        hexactsize 0
        vexactsize 0
        text "#VSTR_LBL_GROUP_NAME_FORCE"
-       font "gui/fonts/sdf_MetronLight24"
-       "exact text" 1
+       font "vppadmintools/gui/fonts/InterDisplay-Regular"
+       "exact text" 0
        "exact text size" 16
        "size to text h" 1
        "size to text v" 1
        wrap 1
+       "condense whitespace" 1
+       "strip newlines" 1
       }
      }
     }

@@ -328,6 +328,9 @@ class EspToolsMenu extends AdminHudSubMenu
 				if (m_EspTrackers.Get(man) != NULL)
 					continue;
 
+				if (!man.GetIdentity()) //?????????????
+					continue;
+
 				if (!man.IsAlive() && !ShowDeadPlayers())
 					continue;
 

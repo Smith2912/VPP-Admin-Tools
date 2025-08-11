@@ -22,7 +22,7 @@ FrameWidgetClass rootPermissionsEditor {
    vexactsize 0
    scaled 1
    draggable 0
-   style DayZDefaultPanel
+   style editor_quad_dark
    "no focus" 0
    {
     PanelWidgetClass PaneAvailablePerms {
@@ -46,7 +46,7 @@ FrameWidgetClass rootPermissionsEditor {
        vexactpos 0
        hexactsize 0
        vexactsize 0
-       style DayZDefaultPanel
+       style editor_quad_dark
       }
       PanelWidgetClass info_title_perms {
        ignorepointer 1
@@ -58,12 +58,12 @@ FrameWidgetClass rootPermissionsEditor {
        vexactpos 0
        hexactsize 0
        vexactsize 0
-       style DayZDefaultPanel
+       style editor_quad_dark
        {
         TextWidgetClass title_text_perms {
          ignorepointer 0
          position 0 0
-         size 0.99 1.353
+         size 0.99 1
          valign center_ref
          hexactpos 0
          vexactpos 0
@@ -71,8 +71,8 @@ FrameWidgetClass rootPermissionsEditor {
          vexactsize 0
          style Normal
          text "#VSTR_LBL_AVA_PERMS"
-         font "gui/fonts/sdf_MetronLight24"
-         "exact text" 1
+         font "vppadmintools/gui/fonts/InterDisplay-Medium"
+         "exact text" 0
          "exact text size" 16
          "text halign" center
          "text valign" center
@@ -92,8 +92,8 @@ FrameWidgetClass rootPermissionsEditor {
       }
       ScrollWidgetClass ScrollerPermissions {
        ignorepointer 0
-       position 0 0.08
-       size 0.98 0.907
+       position 0 0.06
+       size 0.98 0.93
        halign center_ref
        hexactpos 0
        vexactpos 0
@@ -126,7 +126,7 @@ FrameWidgetClass rootPermissionsEditor {
     PanelWidgetClass PaneUserGroups {
      ignorepointer 1
      position 0.01 0.05
-     size 0.5 0.9
+     size 0.5 0.8505
      hexactpos 0
      vexactpos 0
      hexactsize 0
@@ -143,7 +143,7 @@ FrameWidgetClass rootPermissionsEditor {
        vexactpos 0
        hexactsize 0
        vexactsize 0
-       style DayZDefaultPanel
+       style editor_quad_dark
       }
       PanelWidgetClass info_title_groups {
        ignorepointer 1
@@ -155,7 +155,7 @@ FrameWidgetClass rootPermissionsEditor {
        vexactpos 0
        hexactsize 0
        vexactsize 0
-       style DayZDefaultPanel
+       style editor_quad_dark
        {
         TextWidgetClass title_text_players_info {
          ignorepointer 1
@@ -168,8 +168,8 @@ FrameWidgetClass rootPermissionsEditor {
          vexactsize 0
          style Normal
          text "#VSTR_LBL_USER_GROUPS"
-         font "gui/fonts/sdf_MetronLight24"
-         "exact text" 1
+         font "vppadmintools/gui/fonts/InterDisplay-Medium"
+         "exact text" 0
          "exact text size" 16
          "text halign" center
          "text valign" center
@@ -179,7 +179,7 @@ FrameWidgetClass rootPermissionsEditor {
       ScrollWidgetClass ScrollerUserGroups {
        ignorepointer 0
        position 0 0.05
-       size 0.98 0.938
+       size 1 0.938
        halign center_ref
        hexactpos 0
        vexactpos 0
@@ -189,14 +189,15 @@ FrameWidgetClass rootPermissionsEditor {
        {
         GridSpacerWidgetClass SpacerUserGroups {
          ignorepointer 1
-         size 0.988 0.98
+         position 0.01 0
+         size 1 1
          halign center_ref
          hexactpos 0
          vexactpos 0
          hexactsize 0
          vexactsize 0
          Padding 1
-         Margin 1
+         Margin 5
          "Size To Content H" 1
          "Size To Content V" 1
          Columns 1
@@ -208,20 +209,22 @@ FrameWidgetClass rootPermissionsEditor {
     }
     GridSpacerWidgetClass GridActionButtons {
      ignorepointer 1
-     position 0.02 0
+     color 0.3137 0.3137 0.3137 0.7843
+     position 0 0.01
      size 0.468 0.205
-     halign right_ref
+     halign center_ref
      valign bottom_ref
      hexactpos 0
      vexactpos 0
      hexactsize 0
      vexactsize 0
-     style Colorable
+     style DayZDefaultPanelLeft
      Padding 5
      Margin 10
      "Size To Content H" 1
      "Size To Content V" 1
-     Rows 5
+     Columns 4
+     Rows 1
      {
       ButtonWidgetClass btnCreateGroup {
        size 0.33 0.2
@@ -233,11 +236,12 @@ FrameWidgetClass rootPermissionsEditor {
        vexactsize 0
        scriptclass "ConfirmationEventHandler"
        style Editor
+       "no focus" 1
        text "#VSTR_LBL_CREATE_GROUP"
-       font "gui/fonts/MetronLight"
+       font "vppadmintools/gui/fonts/InterDisplay-SemiBold"
       }
       ButtonWidgetClass btnSaveChanges {
-       size 0.33 0.2
+       size 0.4 0.2
        halign center_ref
        valign center_ref
        hexactpos 0
@@ -246,8 +250,9 @@ FrameWidgetClass rootPermissionsEditor {
        vexactsize 0
        scriptclass "ConfirmationEventHandler"
        style Editor
+       "no focus" 1
        text "#VSTR_LBL_UPDATE_PERMISSIONS"
-       font "gui/fonts/MetronLight"
+       font "vppadmintools/gui/fonts/InterDisplay-SemiBold"
       }
       ButtonWidgetClass btnAddMembers {
        size 0.33 0.2
@@ -259,8 +264,9 @@ FrameWidgetClass rootPermissionsEditor {
        vexactsize 0
        scriptclass ""
        style Editor
+       "no focus" 1
        text "#VSTR_LBL_ADD_MEMEBER"
-       font "gui/fonts/MetronLight"
+       font "vppadmintools/gui/fonts/InterDisplay-SemiBold"
       }
       ButtonWidgetClass btnDeleteGroup {
        color 0.8902 0.0784 0.0784 1
@@ -273,8 +279,9 @@ FrameWidgetClass rootPermissionsEditor {
        vexactsize 0
        scriptclass "ConfirmationEventHandler"
        style Editor
+       "no focus" 1
        text "#VSTR_LBL_DELETE_GROUP"
-       font "gui/fonts/MetronLight"
+       font "vppadmintools/gui/fonts/InterDisplay-SemiBold"
       }
      }
     }
@@ -307,7 +314,7 @@ FrameWidgetClass rootPermissionsEditor {
    {
     TextWidgetClass Title {
      ignorepointer 1
-     size 1 1
+     size 1 1.3
      halign center_ref
      valign center_ref
      hexactpos 0
@@ -316,7 +323,7 @@ FrameWidgetClass rootPermissionsEditor {
      vexactsize 0
      style Bold
      text "#VSTR_PERMISSIONS_MANAGER_TITLE"
-     font "gui/fonts/sdf_MetronLight24"
+     font "vppadmintools/gui/fonts/InterDisplay-Bold"
      "size to text h" 1
      "size to text v" 1
      "text halign" center

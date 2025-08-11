@@ -26,8 +26,8 @@ GridSpacerWidgetClass SpacerGrid {
    vexactsize 1
    style Bold
    text "Position:"
-   font "gui/fonts/sdf_MetronLight24"
-   "exact text" 1
+   font "vppadmintools/gui/fonts/InterDisplay-SemiBold"
+   "exact text" 0
    "exact text size" 11
    "size to text h" 1
    "size to text v" 1
@@ -35,13 +35,13 @@ GridSpacerWidgetClass SpacerGrid {
   }
   ButtonWidgetClass PosCopy {
    position 0 0
-   size 77 14
+   size 77 18
    hexactpos 1
    vexactpos 1
    hexactsize 1
    vexactsize 1
    style Editor
-   font "gui/fonts/sdf_MetronBook24"
+   font "vppadmintools/gui/fonts/InterDisplay-Regular"
    {
     TextWidgetClass Pos0 {
      size 0 13
@@ -53,8 +53,8 @@ GridSpacerWidgetClass SpacerGrid {
      vexactsize 1
      style Bold
      text "Copy"
-     font "gui/fonts/sdf_MetronBook24"
-     "exact text" 1
+     font "vppadmintools/gui/fonts/InterDisplay-Regular"
+     "exact text" 0
      "exact text size" 11
      "size to text h" 1
      "size to text v" 1
@@ -71,8 +71,8 @@ GridSpacerWidgetClass SpacerGrid {
    vexactsize 1
    style Bold
    text "Select In PlayerManager"
-   font "gui/fonts/sdf_MetronLight24"
-   "exact text" 1
+   font "vppadmintools/gui/fonts/InterDisplay-SemiBold"
+   "exact text" 0
    "exact text size" 11
    "size to text h" 1
    "size to text v" 1
@@ -95,8 +95,8 @@ GridSpacerWidgetClass SpacerGrid {
    vexactsize 1
    style Bold
    text "Teleport:"
-   font "gui/fonts/sdf_MetronLight24"
-   "exact text" 1
+   font "vppadmintools/gui/fonts/InterDisplay-SemiBold"
+   "exact text" 0
    "exact text size" 11
    "size to text h" 1
    "size to text v" 1
@@ -104,7 +104,7 @@ GridSpacerWidgetClass SpacerGrid {
   }
   ButtonWidgetClass BtnTpToMe {
    position 0 0
-   size 64 14
+   size 64 18
    hexactpos 1
    vexactpos 1
    hexactsize 1
@@ -122,8 +122,8 @@ GridSpacerWidgetClass SpacerGrid {
      vexactsize 1
      style Bold
      text "To me"
-     font "gui/fonts/sdf_MetronBook24"
-     "exact text" 1
+     font "vppadmintools/gui/fonts/InterDisplay-Regular"
+     "exact text" 0
      "exact text size" 11
      "size to text h" 1
      "size to text v" 1
@@ -140,8 +140,8 @@ GridSpacerWidgetClass SpacerGrid {
    vexactsize 1
    style Bold
    text "Teleport:"
-   font "gui/fonts/sdf_MetronLight24"
-   "exact text" 1
+   font "vppadmintools/gui/fonts/InterDisplay-SemiBold"
+   "exact text" 0
    "exact text size" 11
    "size to text h" 1
    "size to text v" 1
@@ -149,7 +149,7 @@ GridSpacerWidgetClass SpacerGrid {
   }
   ButtonWidgetClass BtnTpMeTo {
    position 0 0
-   size 64 14
+   size 64 18
    hexactpos 1
    vexactpos 1
    hexactsize 1
@@ -167,8 +167,8 @@ GridSpacerWidgetClass SpacerGrid {
      vexactsize 1
      style Bold
      text "To"
-     font "gui/fonts/sdf_MetronBook24"
-     "exact text" 1
+     font "vppadmintools/gui/fonts/InterDisplay-Regular"
+     "exact text" 0
      "exact text size" 11
      "size to text h" 1
      "size to text v" 1
@@ -185,8 +185,8 @@ GridSpacerWidgetClass SpacerGrid {
    vexactsize 1
    style Bold
    text "Teleport:"
-   font "gui/fonts/sdf_MetronLight24"
-   "exact text" 1
+   font "vppadmintools/gui/fonts/InterDisplay-SemiBold"
+   "exact text" 0
    "exact text size" 11
    "size to text h" 1
    "size to text v" 1
@@ -194,7 +194,7 @@ GridSpacerWidgetClass SpacerGrid {
   }
   ButtonWidgetClass BtnTpReturn {
    position 0 0
-   size 64 14
+   size 64 18
    hexactpos 1
    vexactpos 1
    hexactsize 1
@@ -212,8 +212,8 @@ GridSpacerWidgetClass SpacerGrid {
      vexactsize 1
      style Bold
      text "Return"
-     font "gui/fonts/sdf_MetronBook24"
-     "exact text" 1
+     font "vppadmintools/gui/fonts/InterDisplay-Regular"
+     "exact text" 0
      "exact text size" 11
      "size to text h" 1
      "size to text v" 1
@@ -224,7 +224,7 @@ GridSpacerWidgetClass SpacerGrid {
   ButtonWidgetClass BtnKill {
    color 0.949 0.0392 0.0392 1
    position 0 0
-   size 64 14
+   size 64 18
    hexactpos 1
    vexactpos 1
    hexactsize 1
@@ -242,8 +242,8 @@ GridSpacerWidgetClass SpacerGrid {
      vexactsize 1
      style Bold
      text "Kill"
-     font "gui/fonts/sdf_MetronBook24"
-     "exact text" 1
+     font "vppadmintools/gui/fonts/InterDisplay-Regular"
+     "exact text" 0
      "exact text size" 11
      "size to text h" 1
      "size to text v" 1
@@ -253,7 +253,7 @@ GridSpacerWidgetClass SpacerGrid {
   }
   ButtonWidgetClass BtnHeal {
    position 0 0
-   size 64 14
+   size 64 18
    hexactpos 1
    vexactpos 1
    hexactsize 1
@@ -271,8 +271,8 @@ GridSpacerWidgetClass SpacerGrid {
      vexactsize 1
      style Bold
      text "Heal"
-     font "gui/fonts/sdf_MetronBook24"
-     "exact text" 1
+     font "vppadmintools/gui/fonts/InterDisplay-Regular"
+     "exact text" 0
      "exact text size" 11
      "size to text h" 1
      "size to text v" 1
