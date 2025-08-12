@@ -203,7 +203,7 @@ class VPPAdminHud extends VPPScriptedMenu
 				
 				for(int x = 0; x < M_SUB_MENUS.Count(); x++)
 				{
-					//Call to hide any broken widgets TODO: remove once DayZ fixes
+					//Call to hide any map widgets, they are stubborn on screen priority
 					if (M_SUB_MENUS[x] != subMenu)
 					{
 						M_SUB_MENUS[x].HideBrokenWidgets(true);

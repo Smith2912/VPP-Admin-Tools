@@ -62,7 +62,8 @@ class VPPDropDownMenu extends ScriptedWidgetEventHandler
 	int AddElement( string text, Widget content = null )
 	{
 		ButtonWidget element = ButtonWidget.Cast( GetGame().GetWorkspace().CreateWidgets(VPPATUIConstants.dropdown_element, m_ContentContainer ) );
-		element.SetText( text );
+		TextWidget displayText = TextWidget.Cast(element.FindAnyWidget("displayText"));
+		displayText.SetText(text);
 		
 		if( content )
 		{

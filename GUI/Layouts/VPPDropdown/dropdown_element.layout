@@ -9,7 +9,25 @@ ButtonWidgetClass dropdown_element {
  style Editor
  "no focus" 1
  text_proportion 0.55
- font "vppadmintools/gui/fonts/InterDisplay-Medium"
+ font "vppadmintools/gui/fonts/InterDisplay-Regular"
  "text outline color" 0.9569 0.2235 0.2235 1
  "text shadow color" 0.9569 0.2235 0.2235 1
+ {
+  TextWidgetClass displayText {
+   ignorepointer 1
+   size 0.042 0.8
+   halign center_ref
+   valign center_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   text "Very long text lawl"
+   font "vppadmintools/gui/fonts/InterDisplay-Regular"
+   "size to text h" 1
+   "size to text v" 0
+   "text halign" center
+   "text valign" center
+  }
+ }
 }

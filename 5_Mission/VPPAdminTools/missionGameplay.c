@@ -537,7 +537,7 @@ modded class MissionGameplay
                 
                 //Show confirmation of delete
                 VPPDialogBox dialogBox = GetVPPUIManager().CreateDialogBox(null,true);
-                dialogBox.InitDiagBox(DIAGTYPE.DIAG_YESNO, "#VSTR_NOTIFY_DEL_OBJ", "#VSTR_NOTIFY_Q_DEL" + "["+targetObj.GetType()+"]?", this);
+                dialogBox.InitDiagBox(DIAGTYPE.DIAG_YESNO, "#VSTR_NOTIFY_DEL_OBJ", "#VSTR_NOTIFY_Q_DEL " + "["+targetObj.GetType()+"]?", this);
             }
         }
     }
@@ -594,7 +594,7 @@ modded class MissionGameplay
             string notificationMsg;
             if ( target == NULL )
             {
-                notificationMsg = "#VSTR_NOTIFY_COPY_CLIPBOARD" + "\n\nPosition: " + PosToString(GetGame().GetPlayer().GetPosition());
+                notificationMsg = "#VSTR_NOTIFY_COPY_CLIPBOARD " + "\n\nPosition: " + PosToString(GetGame().GetPlayer().GetPosition());
                 toCopy = "Position: " + GetGame().GetPlayer().GetPosition().ToString();
                 toCopy += "\nOrientation: " + GetGame().GetPlayer().GetOrientation().ToString();
                 toCopy += "\nConfig-Type: " + GetGame().GetPlayer().GetType();
@@ -603,7 +603,7 @@ modded class MissionGameplay
             else
             {
                 if (targetType == "" || targetType == string.Empty)
-                    notificationMsg = string.Format("#VSTR_NOTIFY_COPY_POS" + "\n\nPosition:%1", PosToString(target.GetPosition()));
+                    notificationMsg = string.Format("#VSTR_NOTIFY_COPY_POS " + "\n\nPosition:%1", PosToString(target.GetPosition()));
                 else
                     notificationMsg = string.Format("Copied position of object: %1 to clipboard\n\nPosition: %2", target.GetType(), PosToString(target.GetPosition()));
                 

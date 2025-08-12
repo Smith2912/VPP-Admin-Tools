@@ -19,7 +19,7 @@ PanelWidgetClass dropdown_selector {
    vexactpos 1
    hexactsize 0
    vexactsize 0
-   font "vppadmintools/gui/fonts/InterDisplay-SemiBold"
+   font "vppadmintools/gui/fonts/InterDisplay-Medium"
    "text offset" 10 0
    "exact text" 0
    "exact text size" 16

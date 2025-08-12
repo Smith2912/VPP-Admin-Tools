@@ -83,7 +83,7 @@ WindowWidgetClass rootFrame {
        scaled 1
        style Editor
        "title visible" 0
-       font "vppadmintools/gui/fonts/InterDisplay-Medium14"
+       font "vppadmintools/gui/fonts/InterDisplay-Medium16"
       }
      }
     }

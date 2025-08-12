@@ -86,8 +86,8 @@ FrameWidgetClass rootFrame {
        hexactsize 0
        vexactsize 0
        text "#VSTR_LBL_PLEASE_WAIT"
-       font "gui/fonts/sdf_MetronLight24"
-       "exact text" 1
+       font "vppadmintools/gui/fonts/InterDisplay-Regular"
+       "exact text" 0
        "exact text size" 16
        "size to text h" 1
        "size to text v" 1

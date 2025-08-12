@@ -146,7 +146,7 @@ class PlayerManager extends PluginBase
 					PlayerBase tg = GetPermissionManager().GetPlayerBaseByID(tgId);
 					if (tg != null)
 					{
-						GetPermissionManager().NotifyPlayer(sender.GetPlainId(),"#VSTR_KICK_PLAYER"+tg.VPlayerGetName(),NotifyTypes.NOTIFY);
+						GetPermissionManager().NotifyPlayer(sender.GetPlainId(),"#VSTR_KICK_PLAYER "+tg.VPlayerGetName(),NotifyTypes.NOTIFY);
 						GetRPCManager().VSendRPC( "RPC_MissionGameplay", "KickClientHandle", new Param1<string>( data.param2 ), true, tg.GetIdentity());
 						GetSimpleLogger().Log(string.Format("\"%1\" (steamid=%2) kicked player: \"%3\"", sender.GetName(), sender.GetPlainId(), tg.VPlayerGetName()));
 					}

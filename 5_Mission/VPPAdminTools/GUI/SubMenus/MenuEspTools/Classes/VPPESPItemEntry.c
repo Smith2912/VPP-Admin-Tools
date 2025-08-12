@@ -17,7 +17,7 @@ class VPPESPItemEntry : VPPPlayerTemplate
 		m_EntryBox.SetHandler(this);
 		m_TargetObject = target;
 		m_RemoveItem = ButtonWidget.Cast(m_EntryBox.FindAnyWidget("btnRemoveItem"));
-		GetVPPUIManager().HookConfirmationDialog(m_RemoveItem, rootWidget,this,"RemoveItem", DIAGTYPE.DIAG_YESNO, "Remove Item", "#VSTR_ESP_Q_REMOVE"+itemName+"#VSTR_ESP_Q_REMOVE_2");
+		GetVPPUIManager().HookConfirmationDialog(m_RemoveItem, rootWidget,this,"RemoveItem", DIAGTYPE.DIAG_YESNO, "Remove Item", "#VSTR_ESP_Q_REMOVE "+itemName+" #VSTR_ESP_Q_REMOVE_2");
 		
 		m_DeleteItem = ButtonWidget.Cast(m_EntryBox.FindAnyWidget("btnDeleteItem"));
 		GetVPPUIManager().HookConfirmationDialog(m_DeleteItem, rootWidget,this,"DeleteItem", DIAGTYPE.DIAG_YESNO, "Delete Item", "#VSTR_ESP_DEL_CONFIRM_2 "+itemName+" #VSTR_ESP_DEL_CONFIRM_3");

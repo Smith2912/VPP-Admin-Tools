@@ -103,12 +103,6 @@ class EspToolsMenu extends AdminHudSubMenu
 		super.OnMenuHide();
 		GetToolbarMenu().AllowSelectBoxDraw(false);
 	}
-
-	override void HideBrokenWidgets(bool state)
-	{
-		m_ScrollerItems.Show(!state);
-		m_Scroller.Show(!state);
-	}
 	
 	void UpdateEsp()
 	{

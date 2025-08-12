@@ -71,7 +71,6 @@ class MenuTeleportManager extends AdminHudSubMenu
 	
 	override void HideBrokenWidgets(bool state)
 	{
-		m_Scroller.Show(!state);
 		m_Map.Show(!state);
 	}
 	

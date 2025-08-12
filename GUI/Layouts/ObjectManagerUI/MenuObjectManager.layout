@@ -578,7 +578,7 @@ FrameWidgetClass rootFrame {
    hexactsize 0
    vexactsize 0
    style Editor
-   font "vppadmintools/gui/fonts/InterDisplay-Medium14"
+   font "vppadmintools/gui/fonts/InterDisplay-Medium16"
   }
   EditBoxWidgetClass SearchInputBox {
    visible 1

@@ -22,7 +22,7 @@ FrameWidgetClass rootFrame {
    vexactsize 0
    scaled 1
    draggable 0
-   style DayZDefaultPanel
+   style editor_quad_dark
    "no focus" 0
    {
     PanelWidgetClass content {
@@ -36,7 +36,7 @@ FrameWidgetClass rootFrame {
      vexactpos 0
      hexactsize 0
      vexactsize 0
-     style DayZDefaultPanel
+     style editor_quad_dark
      {
       PanelWidgetClass PanelBG {
        ignorepointer 1
@@ -49,7 +49,7 @@ FrameWidgetClass rootFrame {
        vexactpos 0
        hexactsize 0
        vexactsize 0
-       style DayZDefaultPanel
+       style editor_quad_dark
        {
         PanelWidgetClass SLDropDownPanel {
          ignorepointer 1
@@ -62,7 +62,7 @@ FrameWidgetClass rootFrame {
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         style DayZDefaultPanel
+         style editor_quad_dark
          {
           WrapSpacerWidgetClass ScriptsDropDown {
            visible 1
@@ -96,7 +96,7 @@ FrameWidgetClass rootFrame {
        text "#VSTR_SEARCH"
        "Use default text" 1
        "exact text" 1
-       font "gui/fonts/MetronLight"
+       font "vppadmintools/gui/fonts/InterDisplay-Regular"
       }
       PanelWidgetClass listHugger {
        ignorepointer 1
@@ -119,7 +119,7 @@ FrameWidgetClass rootFrame {
          hexactsize 0
          vexactsize 0
          style Editor
-         font "gui/fonts/MetronBook16"
+         font "vppadmintools/gui/fonts/InterDisplay-Medium16"
         }
        }
       }
@@ -139,7 +139,7 @@ FrameWidgetClass rootFrame {
        "limit visible" 0
        "Use default text" 0
        "exact text" 1
-       font "gui/fonts/MetronLight"
+       font "vppadmintools/gui/fonts/InterDisplay-Light"
        "disabled text color" 1 0 0 1
       }
       ButtonWidgetClass BtnGetStats {
@@ -169,8 +169,8 @@ FrameWidgetClass rootFrame {
          scaled 1
          style Bold
          text "#VSTR_LBL_GET_ITEM_STATS"
-         font "gui/fonts/sdf_MetronLight24"
-         "exact text" 1
+         font "vppadmintools/gui/fonts/InterDisplay-Medium"
+         "exact text" 0
          "exact text size" 16
          "size to text h" 0
          "size to text v" 0
@@ -204,8 +204,8 @@ FrameWidgetClass rootFrame {
          vexactsize 0
          style Bold
          text "#VSTR_LBL_LOAD_SELECTED"
-         font "gui/fonts/sdf_MetronLight24"
-         "exact text" 1
+         font "vppadmintools/gui/fonts/InterDisplay-Medium"
+         "exact text" 0
          "exact text size" 16
          "text halign" center
          "text valign" center
@@ -238,8 +238,8 @@ FrameWidgetClass rootFrame {
          vexactsize 0
          style Bold
          text "#VSTR_LBL_APPLY_CHANGES"
-         font "gui/fonts/sdf_MetronLight24"
-         "exact text" 1
+         font "vppadmintools/gui/fonts/InterDisplay-Medium"
+         "exact text" 0
          "exact text size" 16
          "text halign" center
          "text valign" center
@@ -280,8 +280,8 @@ FrameWidgetClass rootFrame {
            vexactsize 0
            style Bold
            text "Nominal:"
-           font "gui/fonts/sdf_MetronLight24"
-           "exact text" 1
+           font "vppadmintools/gui/fonts/InterDisplay-Regular"
+           "exact text" 0
            "exact text size" 16
           }
           EditBoxWidgetClass InputNominal {
@@ -299,7 +299,7 @@ FrameWidgetClass rootFrame {
            "limit visible" 0
            "Use default text" 0
            "exact text" 1
-           font "gui/fonts/MetronLight"
+           font "vppadmintools/gui/fonts/InterDisplay-Light"
            "disabled text color" 1 0 0 1
           }
           TextWidgetClass TxtLifetime {
@@ -312,8 +312,8 @@ FrameWidgetClass rootFrame {
            vexactsize 0
            style Bold
            text "LifeTime:"
-           font "gui/fonts/sdf_MetronLight24"
-           "exact text" 1
+           font "vppadmintools/gui/fonts/InterDisplay-Regular"
+           "exact text" 0
            "exact text size" 16
           }
           EditBoxWidgetClass InputLifetime {
@@ -331,7 +331,7 @@ FrameWidgetClass rootFrame {
            "limit visible" 0
            "Use default text" 0
            "exact text" 1
-           font "gui/fonts/MetronLight"
+           font "vppadmintools/gui/fonts/InterDisplay-Light"
            "disabled text color" 1 0 0 1
           }
           TextWidgetClass TxtRestock {
@@ -344,8 +344,8 @@ FrameWidgetClass rootFrame {
            vexactsize 0
            style Bold
            text "Restock:"
-           font "gui/fonts/sdf_MetronLight24"
-           "exact text" 1
+           font "vppadmintools/gui/fonts/InterDisplay-Regular"
+           "exact text" 0
            "exact text size" 16
           }
           EditBoxWidgetClass InputRestock {
@@ -363,7 +363,7 @@ FrameWidgetClass rootFrame {
            "limit visible" 0
            "Use default text" 0
            "exact text" 1
-           font "gui/fonts/MetronLight"
+           font "vppadmintools/gui/fonts/InterDisplay-Light"
            "disabled text color" 1 0 0 1
           }
           TextWidgetClass TxtMin {
@@ -376,8 +376,8 @@ FrameWidgetClass rootFrame {
            vexactsize 0
            style Bold
            text "Minimum:"
-           font "gui/fonts/sdf_MetronLight24"
-           "exact text" 1
+           font "vppadmintools/gui/fonts/InterDisplay-Regular"
+           "exact text" 0
            "exact text size" 16
           }
           EditBoxWidgetClass InputMin {
@@ -395,7 +395,7 @@ FrameWidgetClass rootFrame {
            "limit visible" 0
            "Use default text" 0
            "exact text" 1
-           font "gui/fonts/MetronLight"
+           font "vppadmintools/gui/fonts/InterDisplay-Light"
            "disabled text color" 1 0 0 1
           }
           TextWidgetClass TxtQuantmin {
@@ -409,8 +409,8 @@ FrameWidgetClass rootFrame {
            draggable 0
            style Bold
            text "Quantmin:"
-           font "gui/fonts/sdf_MetronLight24"
-           "exact text" 1
+           font "vppadmintools/gui/fonts/InterDisplay-Regular"
+           "exact text" 0
            "exact text size" 16
           }
           EditBoxWidgetClass InputQuantmin {
@@ -428,7 +428,7 @@ FrameWidgetClass rootFrame {
            "limit visible" 0
            "Use default text" 0
            "exact text" 1
-           font "gui/fonts/MetronLight"
+           font "vppadmintools/gui/fonts/InterDisplay-Light"
            "disabled text color" 1 0 0 1
           }
           TextWidgetClass TxtQuantmax {
@@ -441,8 +441,8 @@ FrameWidgetClass rootFrame {
            vexactsize 0
            style Bold
            text "Quantmax:"
-           font "gui/fonts/sdf_MetronLight24"
-           "exact text" 1
+           font "vppadmintools/gui/fonts/InterDisplay-Regular"
+           "exact text" 0
            "exact text size" 16
           }
           EditBoxWidgetClass InputQuantmax {
@@ -460,7 +460,7 @@ FrameWidgetClass rootFrame {
            "limit visible" 0
            "Use default text" 0
            "exact text" 1
-           font "gui/fonts/MetronLight"
+           font "vppadmintools/gui/fonts/InterDisplay-Light"
            "disabled text color" 1 0 0 1
           }
           TextWidgetClass TxtCost {
@@ -473,8 +473,8 @@ FrameWidgetClass rootFrame {
            vexactsize 0
            style Bold
            text "Cost:"
-           font "gui/fonts/sdf_MetronLight24"
-           "exact text" 1
+           font "vppadmintools/gui/fonts/InterDisplay-Regular"
+           "exact text" 0
            "exact text size" 16
           }
           EditBoxWidgetClass InputCost {
@@ -493,7 +493,7 @@ FrameWidgetClass rootFrame {
            "limit visible" 0
            "Use default text" 0
            "exact text" 1
-           font "gui/fonts/MetronLight"
+           font "vppadmintools/gui/fonts/InterDisplay-Light"
            "disabled text color" 1 0 0 1
           }
          }
@@ -509,7 +509,7 @@ FrameWidgetClass rootFrame {
          vexactpos 0
          hexactsize 0
          vexactsize 0
-         style DayZDefaultPanel
+         style editor_quad_dark
          {
           ItemPreviewWidgetClass ItemPreviewXML {
            visible 0
@@ -530,7 +530,7 @@ FrameWidgetClass rootFrame {
            hexactsize 0
            vexactsize 0
            text "#VSTR_ENABLE_PREVIEW"
-           font "gui/fonts/sdf_MetronLight24"
+           font "vppadmintools/gui/fonts/InterDisplay-Regular"
           }
          }
         }
@@ -544,7 +544,7 @@ FrameWidgetClass rootFrame {
        vexactpos 0
        hexactsize 0
        vexactsize 0
-       style DayZDefaultPanel
+       style editor_quad_dark
        {
         TextWidgetClass title_presets_text {
          ignorepointer 1
@@ -557,8 +557,8 @@ FrameWidgetClass rootFrame {
          vexactsize 0
          style Normal
          text "#VSTR_DETALIS"
-         font "gui/fonts/sdf_MetronLight24"
-         "exact text" 1
+         font "vppadmintools/gui/fonts/InterDisplay-Medium"
+         "exact text" 0
          "exact text size" 16
          "text halign" center
          "text valign" center
@@ -602,8 +602,8 @@ FrameWidgetClass rootFrame {
          hexactsize 0
          vexactsize 0
          text "Filter items from loaded XML"
-         font "gui/fonts/sdf_MetronLight24"
-         "exact text" 1
+         font "vppadmintools/gui/fonts/InterDisplay-Regular"
+         "exact text" 0
          "exact text size" 16
          "size to text h" 1
          "size to text v" 0
@@ -655,7 +655,8 @@ FrameWidgetClass rootFrame {
    {
     TextWidgetClass Title {
      ignorepointer 1
-     size 1 1
+     position 0 0
+     size 1 1.3
      halign center_ref
      valign center_ref
      hexactpos 0
@@ -664,7 +665,7 @@ FrameWidgetClass rootFrame {
      vexactsize 0
      style Bold
      text "#VSTR_XML_EDITOR_TITLE"
-     font "gui/fonts/sdf_MetronLight24"
+     font "vppadmintools/gui/fonts/InterDisplay-Bold"
      "size to text h" 1
      "size to text v" 1
      "text halign" center

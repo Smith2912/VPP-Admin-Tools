@@ -51,12 +51,6 @@ class MenuPermissionsEditor extends AdminHudSubMenu
 		M_SUB_WIDGET.SetHandler(this);
 	}
 	
-	override void HideBrokenWidgets(bool state)
-	{
-		m_ScrollerPermissions.Show(!state);
-		m_ScrollerUserGroups.Show(!state);
-	}
-	
 	override void OnUpdate(float timeslice)
 	{
 		super.OnUpdate(timeslice);

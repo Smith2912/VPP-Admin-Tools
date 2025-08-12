@@ -377,7 +377,7 @@ class PermissionManager extends ConfigurablePlugin
 				if (group.FindUser(data.param1))
 				{
 					group.RemoveMembers(data.param1);
-					NotifyPlayer(sender.GetPlainId(),"#VSTR_PERMS_REMOVE_USER"+data.param1+"#VSTR_FROM_GROUP"+group.GetGroupName(),NotifyTypes.NOTIFY);
+					NotifyPlayer(sender.GetPlainId(),"#VSTR_PERMS_REMOVE_USER "+data.param1+" #VSTR_FROM_GROUP "+group.GetGroupName(),NotifyTypes.NOTIFY);
 
 					GetWebHooksManager().PostData(AdminActivityMessage, new AdminActivityMessage(sender.GetPlainId(), sender.GetName(), "[PermissionManager] Removing User: " + data.param1 + " from Group: " + group.GetGroupName()));
 					Save();
@@ -730,7 +730,7 @@ class PermissionManager extends ConfigurablePlugin
 			{
 				if (user.GetUserName() != identity.VPlayerGetName())
 				{
-					NotifyPlayer(id, "#VSTR_ERROR_NAME_MISMATCH" + user.GetUserName(),NotifyTypes.PERMISSION_REJECT, 15.0);
+					NotifyPlayer(id, "#VSTR_ERROR_NAME_MISMATCH " + user.GetUserName(),NotifyTypes.PERMISSION_REJECT, 15.0);
 					return false;
 				}
 			}
@@ -755,7 +755,7 @@ class PermissionManager extends ConfigurablePlugin
 		if(IsSuperAdmin(targetID) && !IsSuperAdmin(id))
 		{
 			if ( sendNotify )
-				NotifyPlayer(id,"#VSTR_ERROR_CANT_TARGET" + permissionName, NotifyTypes.PERMISSION_REJECT);
+				NotifyPlayer(id,"#VSTR_ERROR_CANT_TARGET " + permissionName, NotifyTypes.PERMISSION_REJECT);
 			
 			return false;
 		}
@@ -795,7 +795,7 @@ class PermissionManager extends ConfigurablePlugin
 				if(group.GetPermissions().Find(permissionName) <= -1)
 				{
 					if ( sendNotify )
-						NotifyPlayer(id,"#VSTR_ERROR_NO_PERM" + permissionName, NotifyTypes.PERMISSION_REJECT);
+						NotifyPlayer(id,"#VSTR_ERROR_NO_PERM " + permissionName, NotifyTypes.PERMISSION_REJECT);
 					
 					return false;
 				}
@@ -807,7 +807,7 @@ class PermissionManager extends ConfigurablePlugin
 		if (!hasPermission &&  targetIdentity != null)
 		{
 			if ( sendNotify )
-				NotifyPlayer(id,"#VSTR_PERM_LVL_LOW" + permissionName + " On: "+targetIdentity.VPlayerGetName(), NotifyTypes.PERMISSION_REJECT);
+				NotifyPlayer(id,"#VSTR_PERM_LVL_LOW " + permissionName + " On: "+targetIdentity.VPlayerGetName(), NotifyTypes.PERMISSION_REJECT);
 		}
 		return hasPermission;
 	}

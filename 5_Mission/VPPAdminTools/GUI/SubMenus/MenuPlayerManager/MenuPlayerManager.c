@@ -146,12 +146,6 @@ class MenuPlayerManager extends AdminHudSubMenu
 		m_Init = true;
 	}
 	
-	override void HideBrokenWidgets(bool state)
-	{
-		m_PlayerList.Show(!state);
-		m_PlayerInfoScroll.Show(!state);
-	}
-	
 	void ResetPages()
 	{
 		foreach(CustomGridSpacer cusGrid : m_DataGrids){

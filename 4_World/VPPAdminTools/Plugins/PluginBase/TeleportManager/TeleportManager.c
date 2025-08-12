@@ -416,7 +416,7 @@ class TeleportManager : ConfigurablePlugin
 				
 				if (totalDeleted > 0)
 				{
-					GetPermissionManager().NotifyPlayer(senderId,"#VSTR_DEL_SUCESS"+totalDeleted+" saved teleport presets!",NotifyTypes.NOTIFY);
+					GetPermissionManager().NotifyPlayer(senderId,"#VSTR_DEL_SUCESS "+totalDeleted+" saved teleport presets!",NotifyTypes.NOTIFY);
 					GetWebHooksManager().PostData(AdminActivityMessage, new AdminActivityMessage(senderId, sender.GetName(), "[TeleportManager] Deleted Preset(s): " + totalDeleted));
 					Save();
 					//send updated list to client
@@ -438,7 +438,7 @@ class TeleportManager : ConfigurablePlugin
 				if(!GetPermissionManager().VerifyPermission(sender.GetPlainId(), "TeleportManager:AddNewPreset")) return;
 				AddLocation(data.param1, data.param2);
 				Save();
-				GetPermissionManager().NotifyPlayer(sender.GetPlainId(),"#VSTR_ADD_SUCESS"+data.param1+" preset!",NotifyTypes.NOTIFY);
+				GetPermissionManager().NotifyPlayer(sender.GetPlainId(),"#VSTR_ADD_SUCESS "+data.param1+" preset!",NotifyTypes.NOTIFY);
 				//send updated list to client
 				GetRPCManager().VSendRPC("RPC_MenuTeleportManager", "HandleData", new Param1<ref array<ref VPPTeleportLocation>>(m_TeleportLocations), true, sender);
 				GetWebHooksManager().PostData(AdminActivityMessage, new AdminActivityMessage(sender.GetPlainId(), sender.GetName(), "[TeleportManager] Added new preset: " + data.param1 + " position: " + data.param2));
@@ -471,7 +471,7 @@ class TeleportManager : ConfigurablePlugin
 				if (success)
 				{
 					Save();
-					GetPermissionManager().NotifyPlayer(sender.GetPlainId(),"#VSTR_EDIT_SUCESS"+data.param1+" preset!",NotifyTypes.NOTIFY);
+					GetPermissionManager().NotifyPlayer(sender.GetPlainId(),"#VSTR_EDIT_SUCESS "+data.param1+" preset!",NotifyTypes.NOTIFY);
 					GetWebHooksManager().PostData(AdminActivityMessage, new AdminActivityMessage(sender.GetPlainId(), sender.GetName(), "[TeleportManager] Edited Preset: " + data.param1));
 					//send updated list to client
 					GetRPCManager().VSendRPC("RPC_MenuTeleportManager", "HandleData", new Param1<ref array<ref VPPTeleportLocation>>(m_TeleportLocations), true, sender);

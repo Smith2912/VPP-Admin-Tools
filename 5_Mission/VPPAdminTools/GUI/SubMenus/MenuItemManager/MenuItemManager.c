@@ -106,11 +106,6 @@ class MenuItemManager extends AdminHudSubMenu
 		m_loaded = true;
 	}
 	
-	override void HideBrokenWidgets(bool state)
-	{
-		m_ScrollerItemList.Show(!state);
-	}
-	
 	override void OnUpdate(float timeslice)
 	{
 		super.OnUpdate(timeslice);

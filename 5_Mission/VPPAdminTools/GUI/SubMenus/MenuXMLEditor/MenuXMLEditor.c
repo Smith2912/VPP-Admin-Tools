@@ -311,7 +311,7 @@ class MenuXMLEditor extends AdminHudSubMenu
 			{
 				m_MapScreen.DrawMarker(name,pos);
 			}
-			m_MapScreen.SetResultText("#VSTR_NOTIFY_TOTALSCANNED"+ " ["+ result.Count() +"]");
+			m_MapScreen.SetResultText("#VSTR_NOTIFY_TOTALSCANNED" + " ["+ result.Count() +"]");
 		}
 	}
 	

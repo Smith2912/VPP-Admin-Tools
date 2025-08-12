@@ -10,7 +10,7 @@ PanelWidgetClass PanelEntry {
  vexactpos 0
  hexactsize 0
  vexactsize 0
- style DayZDefaultPanel
+ style editor_quad_dark
  {
   PanelWidgetClass PanelWidget0 {
    ignorepointer 1
@@ -22,7 +22,7 @@ PanelWidgetClass PanelEntry {
    vexactpos 0
    hexactsize 0
    vexactsize 0
-   style DayZDefaultPanel
+   style editor_quad_dark
   }
   GridSpacerWidgetClass entry_content {
    ignorepointer 0
@@ -63,8 +63,8 @@ PanelWidgetClass PanelEntry {
        hexactsize 0
        vexactsize 0
        text "WebHookName"
-       font "gui/fonts/sdf_MetronLight24"
-       "exact text" 1
+       font "vppadmintools/gui/fonts/InterDisplay-Regular"
+       "exact text" 0
        "exact text size" 16
        "text valign" center
       }
@@ -78,6 +78,7 @@ PanelWidgetClass PanelEntry {
        hexactsize 0
        vexactsize 0
        scriptclass "ConfirmationEventHandler"
+       "no focus" 1
        {
         ImageWidgetClass iconDel {
          ignorepointer 1
@@ -92,8 +93,8 @@ PanelWidgetClass PanelEntry {
          image0 "set:dayz_gui_vpp image:vpp_icon_trash"
          mode additive
          "src alpha" 1
-         "no wrap" 1
-         stretch 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
         }
        }
       }
@@ -108,6 +109,7 @@ PanelWidgetClass PanelEntry {
        hexactsize 0
        vexactsize 0
        scriptclass "ConfirmationEventHandler"
+       "no focus" 1
        {
         ImageWidgetClass iconEdit {
          ignorepointer 1
@@ -122,8 +124,8 @@ PanelWidgetClass PanelEntry {
          image0 "set:dayz_gui image:icon_feedback"
          mode additive
          "src alpha" 1
-         "no wrap" 1
-         stretch 1
+         "clamp mode" clamp
+         "stretch mode" stretch_w_h
         }
        }
       }
