@@ -249,6 +249,9 @@ class MenuItemManager extends AdminHudSubMenu
 	void RequestSpawn(bool singleItem = false, string typeName = "")
 	{
 		ItemBase ib = ItemBase.Cast(m_PreviewObject);
+		if (!ib)
+			return;
+		
 		float quantity = m_InputQuantity.GetText().ToFloat();
 		
 		string txtQuant = m_InputQuantity.GetText();

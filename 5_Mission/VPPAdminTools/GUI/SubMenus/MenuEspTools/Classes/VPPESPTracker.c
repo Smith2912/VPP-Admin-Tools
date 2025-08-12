@@ -75,7 +75,9 @@ class VPPESPTracker: ScriptedWidgetEventHandler
 
     void ~VPPESPTracker() 
 	{
-		VPPUIManager.WIDGET_PTRs.RemoveItem(m_RootWidget); //For drag-selection
+		if (VPPUIManager.WIDGET_PTRs != NULL && m_RootWidget != NULL)
+			VPPUIManager.WIDGET_PTRs.RemoveItem(m_RootWidget); //For drag-selection
+
 		GetGame().GetUpdateQueue(CALL_CATEGORY_GUI).Remove(this.DoUpdate);
         if (m_RootWidget != null)
 			m_RootWidget.Unlink();
