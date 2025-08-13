@@ -88,6 +88,10 @@ class AdminTools extends PluginBase
 	{
 		if (type == CallType.Server && sender != null)
         {
+        	Param1<bool> data; //if true, spawns all attachments
+        	if (!ctx.Read(data))
+        		return;
+
         	if (!GetPermissionManager().VerifyPermission(sender.GetPlainId(), "RepairVehiclesAtCrosshair"))
         		return;
 
@@ -177,6 +181,15 @@ class AdminTools extends PluginBase
 						attachment.SetHealthMax("", "Health"); 
 						attachment.SetSynchDirty(); 
 					}
+				}
+				else if (data.param1) //Allow for spawn of attachments
+				{
+					string typeName = VPPATInventorySlots.SlotsItems[carSlot].GetRandomElement();
+					typeName.ToLower();
+					if (typeName.Contains("_ruined"))
+						typeName = VPPATInventorySlots.SlotsItems[carSlot][0];
+
+					vehicle.GetInventory().CreateAttachmentEx(typeName, slotId);
 				}
 			}
 			carEntity.SetSynchDirty();

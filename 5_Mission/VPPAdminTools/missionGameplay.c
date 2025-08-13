@@ -645,7 +645,7 @@ modded class MissionGameplay
             Car targetVehicle = Car.Cast(g_Game.getObjectAtCrosshair(1000.0, 0.0,NULL));
             if (targetVehicle)
             {
-                GetRPCManager().VSendRPC("RPC_AdminTools", "RepairVehicles", NULL, true, NULL, targetVehicle);
+                GetRPCManager().VSendRPC("RPC_AdminTools", "RepairVehicles", new Param1<bool>(g_Game.IsLeftCtrlDown()), true, NULL, targetVehicle);
             }
         }
     }
