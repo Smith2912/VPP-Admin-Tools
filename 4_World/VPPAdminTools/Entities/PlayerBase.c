@@ -78,6 +78,58 @@ modded class PlayerBase
 		SetName("");
 	}
 
+	void VPPHealPlayer(bool set_max = true)
+	{
+		if (GetGame().IsServer() || !GetGame().IsMultiplayer())
+		{
+			GetStomach().ClearContents();
+
+			DamageSystem.ResetAllZones(this);
+			GetModifiersManager().ResetAll();
+			
+			// bleeding sources
+			if (m_BleedingManagerServer)
+				m_BleedingManagerServer.RemoveAllSources();
+			
+			// Stats
+			if (GetPlayerStats())
+			{
+				int bloodType = GetStatBloodType().Get();
+				GetPlayerStats().ResetAllStats();
+				GetStatBloodType().Set(bloodType);
+			}
+
+			// Agents
+			if (m_AgentPool)
+				m_AgentPool.RemoveAllAgents();
+			
+			if (m_StaminaHandler)
+				m_StaminaHandler.SetStamina(GameConstants.STAMINA_MAX);
+			
+			// uncon
+			if (IsUnconscious())
+				DayZPlayerSyncJunctures.SendPlayerUnconsciousness(this, false);
+			
+			// set max
+			if (set_max)
+			{
+				GetStatWater().Set(GetStatWater().GetMax());
+				GetStatEnergy().Set(GetStatEnergy().GetMax());
+			}
+			
+			// fix up inventory
+			FixAllInventoryItems();
+			
+			//remove bloody hands
+			PluginLifespan moduleLifespan = PluginLifespan.Cast(GetPlugin(PluginLifespan));
+			moduleLifespan.UpdateBloodyHandsVisibilityEx(this, eBloodyHandsTypes.CLEAN);
+			ClearBloodyHandsPenaltyChancePerAgent(eAgents.SALMONELLA);
+			
+			if (GetArrowManager())
+				GetArrowManager().ClearArrows();
+		}
+	}
+
 	void HealBrokenLegs()
 	{
 		float add_health_coef = 1.0;

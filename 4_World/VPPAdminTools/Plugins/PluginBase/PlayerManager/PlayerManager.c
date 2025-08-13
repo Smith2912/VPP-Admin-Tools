@@ -454,54 +454,7 @@ class PlayerManager extends PluginBase
 					targetPlayer = GetPermissionManager().GetPlayerBaseByID(id);
 					if (targetPlayer != null)
 					{
-						DamageSystem.ResetAllZones(targetPlayer);
-		                targetPlayer.GetModifiersManager().ResetAll();
-		                
-		                //Stats
-		                if (targetPlayer.GetPlayerStats())
-		                {
-		                    targetPlayer.GetPlayerStats().ResetAllStats();
-
-		                    targetPlayer.GetStatBloodType().Set(targetPlayer.GetStatBloodType().Get());
-		                    targetPlayer.GetStatHeatComfort().Set(targetPlayer.GetStatHeatComfort().GetMax());
-		                    targetPlayer.GetStatTremor().Set(targetPlayer.GetStatTremor().GetMin());
-		                    targetPlayer.GetStatWet().Set(targetPlayer.GetStatWet().GetMin());
-		                    targetPlayer.GetStatEnergy().Set(targetPlayer.GetStatEnergy().GetMax());
-		                    targetPlayer.GetStatWater().Set(targetPlayer.GetStatWater().GetMax());
-		                    targetPlayer.GetStatDiet().Set(targetPlayer.GetStatDiet().GetMax());
-		                    targetPlayer.GetStatSpecialty().Set(targetPlayer.GetStatSpecialty().GetMax());
-		                    targetPlayer.GetStatHeatBuffer().Set(targetPlayer.GetStatHeatBuffer().GetMax());
-		                }
-		    
-		                //Agents
-		                targetPlayer.RemoveAllAgents();
-		                
-		                //Broken legs
-		                targetPlayer.HealBrokenLegs();
-
-						//Bleeding sources
-						if (targetPlayer.GetBleedingManagerServer())
-		                {
-		                    int attempts = 0; //fail safe, so we dont get stuck lol
-		                    int cuts = targetPlayer.GetBleedingManagerServer().m_BleedingSources.Count();
-
-		                    while(cuts > 0)
-		                    {
-		                        attempts++;
-		                        if (attempts > 15)
-		                            return;
-
-		                        if (targetPlayer.GetBleedingManagerServer())
-		                        {
-		                        	int bit = targetPlayer.GetBleedingManagerServer().GetMostSignificantBleedingSource();
-									if(bit != 0)
-									{
-		                            	targetPlayer.GetBleedingManagerServer().RemoveBleedingSourceNonInfectious(bit);
-		                            	cuts--;
-									}
-		                        }
-		                    }
-		                }
+						targetPlayer.VPPHealPlayer();
 						GetSimpleLogger().Log(string.Format("\"%1\" (steamid=%2) healed player (steamid=%3)", sender.GetName(), sender.GetPlainId(), id));
 					}
 				}
