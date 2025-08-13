@@ -2,7 +2,7 @@ FrameWidgetClass rootFrame {
  clipchildren 1
  color 1 0 0 1
  position 0 0
- size 0.7 0.8
+ size 0.9 0.8
  halign center_ref
  valign center_ref
  hexactpos 1
@@ -18,14 +18,14 @@ FrameWidgetClass rootFrame {
    inheritalpha 0
    color 0 0 0 0.549
    position 0 0
-   size 1 1
+   size 0.8 1
    hexactpos 1
    vexactpos 1
    hexactsize 0
    vexactsize 0
    scaled 1
    draggable 0
-   style DayZDefaultPanel
+   style editor_quad_dark
    "no focus" 0
    {
     PanelWidgetClass Hugger {
@@ -78,7 +78,7 @@ FrameWidgetClass rootFrame {
       }
       TextWidgetClass SomeText {
        ignorepointer 1
-       size 0.933 0.794
+       size 0.933 0.48
        halign center_ref
        valign center_ref
        hexactpos 0
@@ -100,7 +100,7 @@ FrameWidgetClass rootFrame {
   }
   PanelWidgetClass Header {
    ignorepointer 0
-   size 0.993 0.028
+   size 1 0.028
    halign center_ref
    hexactpos 0
    vexactpos 0
@@ -141,7 +141,7 @@ FrameWidgetClass rootFrame {
     ButtonWidgetClass BtnClose {
      clipchildren 1
      color 0 0 0 1
-     size 0.03 1
+     size 0.02 1
      halign right_ref
      hexactpos 0
      vexactpos 0
@@ -164,6 +164,98 @@ FrameWidgetClass rootFrame {
        "src alpha" 1
       }
      }
+    }
+   }
+  }
+  TextListboxWidgetClass itemsList {
+   position 0 0.07
+   size 0.2 0.84
+   halign right_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   style Editor
+   font "vppadmintools/gui/fonts/InterDisplay-Medium16"
+  }
+  EditBoxWidgetClass SearchInputBox {
+   position 0 0.03
+   size 0.2 0.04
+   halign right_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   style DefaultBorder
+   "no focus" 0
+   text "#VSTR_SEARCH"
+   "Use default text" 1
+   "exact text" 1
+   font "vppadmintools/gui/fonts/InterDisplay-SemiBold"
+  }
+  ButtonWidgetClass btnDeleteObj {
+   position 0.02 0.055
+   size 0.158 0.035
+   halign right_ref
+   valign bottom_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   style Editor
+   "no focus" 1
+   font "gui/fonts/MetronLight14"
+   {
+    TextWidgetClass txtbtn2 {
+     clipchildren 1
+     ignorepointer 1
+     size 0.8 0.8
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "Delete Selected"
+     font "vppadmintools/gui/fonts/InterDisplay-Regular"
+     "exact text" 0
+     "exact text size" 16
+     "text halign" center
+     "text valign" center
+    }
+   }
+  }
+  ButtonWidgetClass btnDeleteAll {
+   color 0.8235 0.0941 0.0941 1
+   position 0.02 0.01
+   size 0.158 0.035
+   halign right_ref
+   valign bottom_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   scriptclass "ConfirmationEventHandler"
+   style Editor
+   "no focus" 1
+   font "gui/fonts/MetronLight14"
+   {
+    TextWidgetClass txtbtn0 {
+     clipchildren 1
+     ignorepointer 1
+     size 0.8 0.8
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "Delete All"
+     font "vppadmintools/gui/fonts/InterDisplay-Regular"
+     "exact text" 0
+     "exact text size" 16
+     "text halign" center
+     "text valign" center
     }
    }
   }

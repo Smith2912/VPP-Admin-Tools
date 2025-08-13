@@ -297,19 +297,19 @@ class MenuXMLEditor extends AdminHudSubMenu
 	
 	void HandleStats(CallType type, ParamsReadContext ctx, PlayerIdentity sender, Object target)
 	{
-		Param1<ref map<string,vector>> data;
+		Param1<ref map<string, ref Param3<vector, int, int>>> data;
 		if (!ctx.Read(data)) return;
 		
 		if (type == CallType.Client)
 		{
-			map<string,vector> result = data.param1;
+			map<string, ref Param3<vector, int, int>> result = data.param1;
 			if (m_MapScreen != null)
 				delete m_MapScreen;
 			
 			m_MapScreen = new ItemScanResultScreen();
-			foreach(string name, vector pos: result)
+			foreach(string name, Param3<vector, int, int> dta: result)
 			{
-				m_MapScreen.DrawMarker(name,pos);
+				m_MapScreen.StoreItemData(name, dta.param1, dta.param2, dta.param3);
 			}
 			m_MapScreen.SetResultText("#VSTR_NOTIFY_TOTALSCANNED" + " ["+ result.Count() +"]");
 		}

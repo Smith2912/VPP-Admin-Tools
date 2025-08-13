@@ -249,8 +249,6 @@ class MenuItemManager extends AdminHudSubMenu
 	void RequestSpawn(bool singleItem = false, string typeName = "")
 	{
 		ItemBase ib = ItemBase.Cast(m_PreviewObject);
-		if (!ib)
-			return;
 		
 		float quantity = m_InputQuantity.GetText().ToFloat();
 		
@@ -259,15 +257,15 @@ class MenuItemManager extends AdminHudSubMenu
 		
 		if (txtQuant == "max" || txtQuant == string.Empty)
 		{
-			if (ib.IsMagazine()){
+			if (ib && ib.IsMagazine()){
 				quantity = ib.ConfigGetInt("count");
-			}else{
+			}else if (ib){
 				quantity = ib.GetQuantityMax();
 			}
 		}
 
 		//Handles mags, ammo etc (clamps it between 0..1)
-		if (ib.HasQuantity())
+		if (ib && ib.HasQuantity())
 		{
 			if (ib.IsMagazine())
 			{

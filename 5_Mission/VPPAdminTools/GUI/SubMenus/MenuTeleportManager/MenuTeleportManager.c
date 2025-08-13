@@ -21,6 +21,7 @@ class MenuTeleportManager extends AdminHudSubMenu
 	private CheckBoxWidget   m_ChkTpSelected;
 	private CheckBoxWidget   m_chkSelectAll;
 	private CheckBoxWidget   m_ChkShowMarkers;
+	private TextWidget	 	 m_txtCursorPos;
 	
 	void MenuTeleportManager()
 	{
@@ -63,7 +64,8 @@ class MenuTeleportManager extends AdminHudSubMenu
 		m_ChkTpSelected  = CheckBoxWidget.Cast(M_SUB_WIDGET.FindAnyWidget( "ChkTpSelected"));
 		m_chkSelectAll   = CheckBoxWidget.Cast(M_SUB_WIDGET.FindAnyWidget( "chkSelectAll"));
 		m_ChkShowMarkers = CheckBoxWidget.Cast(M_SUB_WIDGET.FindAnyWidget( "ChkShowMarkers"));
-		
+		m_txtCursorPos   = TextWidget.Cast(M_SUB_WIDGET.FindAnyWidget( "txtCursorPos"));
+
 		GetTeleportPositions();
 		GetRPCManager().VSendRPC( "RPC_TeleportManager", "GetPlayerPositions", null, true, null);
 		m_loaded = true;
@@ -91,11 +93,20 @@ class MenuTeleportManager extends AdminHudSubMenu
 		m_btnEditPos.Enable(selectedCount == 1);
 		m_BtnRemove.Enable(selectedCount >= 1);
 		m_btnTeleport.Enable(selectedCount == 1);
+
+		Widget w = GetWidgetUnderCursor();
+		if (w && w == m_Map)
+		{
+			vector pos = ScreenToWorld();
+			pos[1] = GetGame().SurfaceY(pos[0], pos[2]);
+
+			string posTxt = string.Format("X:%1     Y:%2     Z:%3", pos[0], pos[1], pos[2]);
+			m_txtCursorPos.SetText(posTxt);
+		}
 	}
-		
+	
 	override bool OnClick(Widget w, int x, int y, int button)
 	{
-		super.OnClick(w, x, y, button);
 		switch(w)
 		{
 			case m_btnRefresh:
@@ -121,7 +132,8 @@ class MenuTeleportManager extends AdminHudSubMenu
 				CreatePositionPopUp(selected.GetVPPTeleportLocation().GetLocation(),true,selected.GetVPPTeleportLocation().GetName());
 			break;
 		}
-		return false;
+
+		return super.OnClick(w, x, y, button);
 	}
 	
 	void UpdateMap(CallType type, ParamsReadContext ctx, PlayerIdentity sender, Object target)
@@ -244,6 +256,16 @@ class MenuTeleportManager extends AdminHudSubMenu
 				return true;
 			}
 		}
+
+		if (button == MouseState.RIGHT && w == m_Map)
+		{
+			vector _pos = ScreenToWorld();
+			_pos[1] = GetGame().SurfaceY(_pos[0], _pos[2]);
+			GetGame().CopyToClipboard(_pos.ToString());
+			GetVPPUIManager().DisplayNotification("Copied map cursor position!", "Position Copy", 3.0);
+			return true;
+		}
+
 		return super.OnDoubleClick(w, x, y, button);
 	}
 	

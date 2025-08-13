@@ -55,7 +55,9 @@ class BuildingEntry : VPPPlayerTemplate
 				m_SpawnedBuilding.SetRef(trackerObj);
 			}
 		}
-		m_TrackerWidget.OnTrackerSelected.Insert(this.OnTrackerSelecet);
+		
+		if (m_TrackerWidget && m_TrackerWidget.OnTrackerSelected != NULL)
+			m_TrackerWidget.OnTrackerSelected.Insert(this.OnTrackerSelecet);
 		
 		//Set to show tracker by defualt 
 		m_StatusCheckBox.SetColor(ARGB(255,0,255,0));
